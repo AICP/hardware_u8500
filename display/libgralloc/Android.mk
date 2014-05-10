@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(PRODUCT_DEVICE),janice)
 MULTIMEDIA_PATH := hardware/u8500/multimedia
 
 LOCAL_PATH := $(call my-dir)
@@ -31,3 +32,4 @@ LOCAL_MODULE := gralloc.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS:= -DLOG_TAG=\"gralloc\"
 include $(BUILD_SHARED_LIBRARY)
+endif
