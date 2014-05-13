@@ -1,5 +1,6 @@
 # iw
 #
+ifeq ($(PRODUCT_DEVICE),janice)
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 NO_PKG_CONFIG=y
@@ -48,3 +49,4 @@ LOCAL_STATIC_LIBRARIES := libnl_2 libc libstdc++ libm
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_MODULE:=iw
 include $(BUILD_EXECUTABLE)
+endif
